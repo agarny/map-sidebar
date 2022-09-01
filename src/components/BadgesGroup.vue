@@ -65,10 +65,17 @@ export default {
       }
     },
     addSimulationsToCategories: function (array) {
-      if (array && array.length > 0) {
-        const size = 1;
-        this.categories["Simulations"] = { size };
-        this.categories["All"].size += size;
+      if ((this.entry.datasetId === "4")
+          || (this.entry.datasetId === "17")
+          || (this.entry.datasetId === "78")
+          || (this.entry.datasetId === "135")
+          || (this.entry.datasetId === "157")
+          || (array && array.length > 0)) {
+        if (this.categories["Simulations"] === undefined) {
+          const size = 1;
+          this.categories["Simulations"] = { size };
+          this.categories["All"].size += size;
+        }
       }
     },
     categoryClicked: function(name) {

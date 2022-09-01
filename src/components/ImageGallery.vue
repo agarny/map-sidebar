@@ -300,7 +300,12 @@ export default {
       }
     },
     createSimulationItems: function () {
-      if (this.entry.simulation && this.entry.simulation.length > 0) {
+      if ((this.datasetId === 4)
+          || (this.datasetId === 17)
+          || (this.datasetId === 78)
+          || (this.datasetId === 135)
+          || (this.datasetId === 157)
+          || (this.entry.simulation && this.entry.simulation.length > 0)) {
         let action = {
           label: undefined,
           apiLocation: this.envVars.API_LOCATION,
